@@ -5,16 +5,16 @@ import jakarta.persistence.*;
 import java.util.Objects;
 @Entity
 @Table(name = "tb_game_list")
-public class GameLIst {
+public class GameList {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    public GameLIst(){
+    public GameList(){
 
     }
 
-    public GameLIst(Long id, String name) {
+    public GameList(Long id, String name) {
         this.id = id;
         this.name = name;
     }
@@ -39,7 +39,7 @@ public class GameLIst {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        GameLIst gameLIst = (GameLIst) o;
+        GameList gameLIst = (GameList) o;
         return Objects.equals(id, gameLIst.id);
     }
 

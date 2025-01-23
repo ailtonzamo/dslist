@@ -15,7 +15,7 @@ public class BelongingPK implements Serializable {
     private Game game;
     @ManyToOne
     @JoinColumn(name="list_id")
-    private GameLIst gameLIst;
+    private GameList gameLIst;
     public BelongingPK(){
 
 
@@ -25,7 +25,7 @@ public class BelongingPK implements Serializable {
         return game;
     }
 
-    public BelongingPK(Game game, GameLIst gameLIst) {
+    public BelongingPK(Game game, GameList gameLIst) {
         this.game = game;
         this.gameLIst = gameLIst;
     }
@@ -34,11 +34,11 @@ public class BelongingPK implements Serializable {
         this.game = game;
     }
 
-    public GameLIst getGameLIst() {
+    public GameList getGameLIst() {
         return gameLIst;
     }
 
-    public void setGameLIst(GameLIst gameLIst) {
+    public void setGameLIst(GameList gameLIst) {
         this.gameLIst = gameLIst;
     }
 
